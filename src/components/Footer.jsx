@@ -6,7 +6,7 @@ import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 const Footer = () => {
 
     return (
-        <div className="footer">
+        <div className="footer mt-4">
             <div className="footer-navigation">
                 <div className="col-sm-4 col-md-3 mt-4">
                     <h4>Our Certificate</h4>

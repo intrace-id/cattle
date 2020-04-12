@@ -62,6 +62,11 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
     border-width: 2px;
   }
+
+  &.download {
+    height: 5rem !important;
+    padding: 10px 20px;
+  }
 }
 
 .error-page {
@@ -240,6 +245,12 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
   }
+
+  &-team {
+    border-top: 15px solid #003399;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .article-section {
@@ -328,5 +339,65 @@ h1, h2, h3, h4, h5, h6 {
       color: rgba(255, 255, 255, 1);
       font-weight: bold;
     }
+  }
+}
+
+.about-us {
+  &-header {
+    background-color: #003399;
+    color: #FFFFFF;
+    text-align: center;
+
+    h1 {
+      font-size: 48px;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 24px;
+      font-weight: normal;
+    }
+  }
+
+  &-value {
+    background-color: #F5F5F5;
+
+    .border-right {
+      border-right: #C4C4C4 2px solid;
+    }
+
+    h2, h4, p {
+      text-align: center;
+      margin: 0;
+    }
+
+    h2 {
+      color: #003399;
+    }
+
+    p {
+      color: #2f2f2f;
+    }
+  }
+
+  &-team {
+    h2, h4, p {
+      text-align: center;
+      margin: 0;
+    }
+
+    h2 {
+      color: #003399;
+    }
+
+    p {
+      color: #2f2f2f;
+    }
+  }
+}
+
+.text {
+  &-primary {
+    color: #003399;
   }
 }
