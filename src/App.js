@@ -9,7 +9,8 @@ import './styles/bootstrap-grid.css';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 
-import HomePage from './containers/Homepage';
+import HomePage from './containers/HomePage';
+import TrainingPage from './containers/TrainingPage';
 import ErrorPage from './containers/404.jsx';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Navbar/>
         <Switch>
           <Route exact path="/" render={ () => ( <HomePage/> ) }/>
+          <Route exact path="/trainings/:trainingId" render={ () => ( <TrainingPage/> ) }/>
           <Route component={ () => <ErrorPage/> }/>
         </Switch>
         <Footer/>
