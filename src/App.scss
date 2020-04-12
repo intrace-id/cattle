@@ -246,6 +246,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 60px 0;
 }
 
+.article {
+  &-paragraph {
+    text-align: justify;
+    line-height: 1.5;
+    text-indent: 24px ;
+  }
+}
+
 .training {
   &-slider {
     display: flex;

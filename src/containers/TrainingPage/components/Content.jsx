@@ -3,22 +3,22 @@ import React from 'react'
 const Content = () => {
 
     return (
-        <div className='d-flex justify-content-center my-4'>
+        <div className='d-flex justify-content-center my-4 py-4'>
             <div className="d-flex col-sm-12 col-md-10">
                 <div className="col-sm-9 px-4">
-                    <h2>About Training</h2>
+                    <h2 className='mt-4'>About Training</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt commodi vitae nihil aliquid! Voluptas nostrum quae aliquid explicabo. Inventore eos ullam perspiciatis, possimus et veniam reprehenderit recusandae. Beatae, ea facere.</p>
-                    <h2>Designed For</h2>
+                    <h2 className='mt-4'>Designed For</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dolores deserunt incidunt quos ipsam quasi rerum. Molestias maxime, voluptatem nisi, nulla reiciendis debitis veritatis fuga sit rerum consequuntur nemo voluptas.</p>
-                    <h2>You Will Learn to</h2>
+                    <h2 className='mt-4'>You Will Learn to</h2>
                     <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
+                        <li class='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
+                        <li class='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
+                        <li class='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
+                        <li class='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
+                        <li class='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
                     </ul>
-                    <h2>Course Content</h2>
+                    <h2 className='mt-4'>Course Content</h2>
                     <div className='training-table mt-2'>
                         <div className='training-table-title pl-3'>
                             <div>
@@ -54,8 +54,8 @@ const Content = () => {
                             <span>In-House: To Be Discussed</span>
                         </div>
                         <div class='d-flex justify-content-center'>
-                            <button className="px-3 btn btn-primary">Register</button>
-                            <button className="px-4 btn ml-2">Login</button>
+                            <button className="btn col">Ask Us</button>
+                            <button className="btn ml-2 btn-primary col">Register</button>
                         </div>
                     </div>
                     <div className='d-flex align-items-center my-4'>

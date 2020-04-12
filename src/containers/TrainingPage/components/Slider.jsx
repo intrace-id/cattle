@@ -30,7 +30,7 @@ const Slider = () => {
                     </div>
 
                     <div className='mt-4 pt-4'>
-                        <div className='d-flex align-items-center'>
+                        <div className='d-flex align-items-center my-3'>
                             <img src={process.env.PUBLIC_URL + '/img/logo/logo-drops.png'} alt="logo-drops" height='56px'/>     
                             <span className='ml-2'>Dropped Object Prevention Scheme</span>
                         </div>
