@@ -6,6 +6,7 @@ import store from './store';
 import './App.scss';
 import './styles/bootstrap-grid.css';
 
+import Header from './components/Header.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <Provider store={ store }>
       <Router>
+        <Header/>
         <Navbar/>
         <Switch>
           <Route exact path="/" render={ () => ( <HomePage/> ) }/>

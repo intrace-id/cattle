@@ -1,5 +1,5 @@
 import Axios from 'axios';
 
 export default Axios.create({
-    baseURL: 'https://localhost:80/api/'
+    baseURL: 'https://api.intrace.id/v1/'
 });

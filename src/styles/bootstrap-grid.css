@@ -3896,4 +3896,10 @@ html {
     margin-left: auto !important;
   }
 }
+
+@media (max-width: 720px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
 /*# sourceMappingURL=bootstrap-grid.css.map */

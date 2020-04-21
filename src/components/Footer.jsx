@@ -6,22 +6,22 @@ import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 const Footer = () => {
 
     return (
-        <div className="footer mt-4">
-            <div className="footer-navigation">
-                <div className="col-sm-4 col-md-3 mt-4">
+        <div className="footer mt-4 d-flex flex-column align-items-center">
+            <div className="footer-navigation row col-10 my-4">
+                <div className="col-md-4 col-sm-12 col-md-3 mt-4 px-4">
                     <h4>Our Certificate</h4>
                     <ul>
-                        <li><a href="#">ISO 9001:2015 certified</a></li>
-                        <li><a href="#">ISO 14001:2015 certified</a></li>
-                        <li><a href="#">ISO 45001:2018 certified</a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/posts/indonesia-training-center_iso-90012015-certificate-for-intraceid-activity-6657650926460989440-SOlo">ISO 9001:2015 certified</a></li>
+                        {/* <li><a href="#">ISO 14001:2015 certified</a></li> */}
+                        {/* <li><a href="#">ISO 45001:2018 certified</a></li> */}
                     </ul>
                 </div>
-                <div className="col-sm-4 col-md-3 mt-4">
+                <div className="col-md-4 col-sm-12 col-md-3 mt-4 px-4">
                     <h4>Contact Us</h4>
                     <ul>
                         <li className="mb-4">
                             <FontAwesomeIcon icon={faEnvelope} color="#FFFFFF" className="mr-2"/>
-                            <span>faizal@intrace.id</span>    
+                            <span>faizalzul@intrace.id</span>    
                         </li>
                         <li>
                             <FontAwesomeIcon icon={faPhoneAlt} color="#FFFFFF" className="mr-2"/>
@@ -29,7 +29,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="col-sm-4 col-md-3 mt-4">
+                <div className="col-md-4 col-sm-12 col-md-3 mt-4 px-4">
                     <h4>Office Address</h4>
                     <ul>
                         <li><span>Plaza Mutiara, 8th Floor</span></li>
@@ -38,13 +38,23 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="footer-copyright">
-                <span className="col-md-5 col-xs-6">© 2020 PT. Kompetensi Anak Bangsa. All Rights Reserved</span>
-                <div className="footer-copyright-logo col-md-5 col-sm-6">
-                    <img src={process.env.PUBLIC_URL + '/img/logo/facebook-circle-48px.png'} alt="facebook-icon"/>
-                    <img src={process.env.PUBLIC_URL + '/img/logo/instagram-circle-48px.png'} alt="instagram-icon"/>
-                    <img src={process.env.PUBLIC_URL + '/img/logo/linkedin-circle-48px.png'} alt="linkedin-icon"/>
-                    <img src={process.env.PUBLIC_URL + '/img/logo/twitter-circle-48px.png'} alt="twitter-icon"/>
+            <div className="footer-copyright d-flex flex-row justify-content-between align-items-center col-sm-12 row">
+                <div className='col-md-5 col-sm-7 p-2'>
+                    <span>© 2020 PT. Kompetensi Anak Bangsa. All Rights Reserved</span>
+                </div>
+                <div className="footer-copyright-logo col-md-5 col-sm-5">
+                    {/* <a href="">
+                        <img src={process.env.PUBLIC_URL + '/img/logo/facebook-circle-48px.png'} alt="facebook-icon"/>
+                    </a> */}
+                    <a href="https://www.instagram.com/intrace.id/" target="_blank">
+                        <img src={process.env.PUBLIC_URL + '/img/logo/instagram-circle-48px.png'} alt="instagram-icon"/>
+                    </a>
+                    <a href="https://www.linkedin.com/company/indonesia-training-center/" target="_blank">
+                        <img src={process.env.PUBLIC_URL + '/img/logo/linkedin-circle-48px.png'} alt="linkedin-icon"/>
+                    </a>
+                    {/* <a href="">
+                        <img src={process.env.PUBLIC_URL + '/img/logo/twitter-circle-48px.png'} alt="twitter-icon"/>
+                    </a> */}
                 </div>
             </div>
         </div>
