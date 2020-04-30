@@ -12,9 +12,11 @@ const Slider = () => {
                 <div className="d-flex flex-column col-md-4 col-sm-10">
                     <h1>Find Your Course</h1>
                     <h2 className='mt-2'>Brings You to The Next Level <br/>Through Certification Training</h2>
-                    <button className='btn btn-lg mt-4'>
-                        Trending Certification
-                    </button>
+                    <a href="/#training">
+                        <button className='btn btn-lg mt-4'>
+                            Trending Certification
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

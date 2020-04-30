@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="col-md-4 col-sm-12 col-md-3 mt-4 px-4">
                     <h4>Our Certificate</h4>
                     <ul>
-                        <li><a target="_blank" href="https://www.linkedin.com/posts/indonesia-training-center_iso-90012015-certificate-for-intraceid-activity-6657650926460989440-SOlo">ISO 9001:2015 certified</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/posts/indonesia-training-center_iso-90012015-certificate-for-intraceid-activity-6657650926460989440-SOlo">ISO 9001:2015 certified</a></li>
                         {/* <li><a href="#">ISO 14001:2015 certified</a></li> */}
                         {/* <li><a href="#">ISO 45001:2018 certified</a></li> */}
                     </ul>
@@ -46,10 +46,10 @@ const Footer = () => {
                     {/* <a href="">
                         <img src={process.env.PUBLIC_URL + '/img/logo/facebook-circle-48px.png'} alt="facebook-icon"/>
                     </a> */}
-                    <a href="https://www.instagram.com/intrace.id/" target="_blank">
+                    <a href="https://www.instagram.com/intrace.id/" target="_blank" rel="noopener noreferrer">
                         <img src={process.env.PUBLIC_URL + '/img/logo/instagram-circle-48px.png'} alt="instagram-icon"/>
                     </a>
-                    <a href="https://www.linkedin.com/company/indonesia-training-center/" target="_blank">
+                    <a href="https://www.linkedin.com/company/indonesia-training-center/" target="_blank" rel="noopener noreferrer">
                         <img src={process.env.PUBLIC_URL + '/img/logo/linkedin-circle-48px.png'} alt="linkedin-icon"/>
                     </a>
                     {/* <a href="">

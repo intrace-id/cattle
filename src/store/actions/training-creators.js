@@ -1,7 +1,7 @@
 import { 
-	REQUEST_TRAINING,
-	RECEIVE_TRAINING,
-	INVALIDATE_TRAINING,
+	REQUEST_TRAININGS,
+	RECEIVE_TRAININGS,
+	INVALIDATE_TRAININGS,
 	REQUEST_ONE_TRAINING,
 	RECEIVE_ONE_TRAINING,
 	INVALIDATE_ONE_TRAINING
@@ -9,9 +9,9 @@ import {
 
 import serpentAPI from '../../utils/apis/serpent';
 
-export const fetchtrainings = (page = 1) => {
+export const fetchTrainings = (page = 1) => {
 	return dispatch => {
-		dispatch(requesttrainings())
+		dispatch(requestTrainings())
 		serpentAPI.get('/trainings')
 			.then(({ data }) => {
 				dispatch(receiveTrainings(data))
@@ -22,15 +22,15 @@ export const fetchtrainings = (page = 1) => {
 	}
 };
 
-export const requesttrainings = () => {
+export const requestTrainings = () => {
 	return {
-		type: REQUEST_TRAINING,
+		type: REQUEST_TRAININGS,
 	}
 };
 
-export const receivetrainings = (data) => {
+export const receiveTrainings = (data) => {
 	return {
-		type: RECEIVE_TRAINING,
+		type: RECEIVE_TRAININGS,
 		trainings: data.results,
 		pages: data.info.pages,
 		keyword: data.keyword,
@@ -38,24 +38,27 @@ export const receivetrainings = (data) => {
 	};
 };
 
-export const invalidatetrainings = (error) => {
+export const invalidateTrainings = (error) => {
 	return {
-		type: INVALIDATE_TRAINING,
+		type: INVALIDATE_TRAININGS,
 		message: error.message,
 		keyword: error.keyword,
 	}
 }
 
 export const fetchOneTraining = (id) => {
-	return dispatch => {
+	return (state, dispatch) => {
 		dispatch(requestOneTraining())
-		serpentAPI.get('/trainings/' + id)
-			.then(({ data }) => {
-				dispatch(receiveOneTraining(data))
-			})
-			.catch( err => {
-				dispatch(invalidateOneTraining(err))
-			})
+
+		dispatch(receiveOneTraining('data'))
+
+		// serpentAPI.get('/trainings/' + id)
+		// 	.then(({ data }) => {
+		// 		dispatch(receiveOneTraining(data))
+		// 	})
+		// 	.catch( err => {
+		// 		dispatch(invalidateOneTraining(err))
+		// 	})
 	}
 }
 

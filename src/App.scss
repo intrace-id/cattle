@@ -13,6 +13,14 @@ a, button, input[type=button], .clickable {
   text-align: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
+p.indent {
+  text-indent: 1rem;
+}
+
 .navbar {
   width: 100%;
   height: 64px;
@@ -179,15 +187,14 @@ a, button, input[type=button], .clickable {
 .training {
   background-color: #EEEEEE;
   width: 100%;
-  padding: 60px 0;
   display: flex;
   justify-content: center;
 
   &-about{
     min-height: 150px;
-    height: 100%;
-    padding: 15px;
+    padding: 20px;
     background-color: #2F2F2F;
+    margin-top: 40px;
 
     h2, p {
       color: #FFFFFF;
@@ -201,9 +208,11 @@ a, button, input[type=button], .clickable {
   }
 
   &-detail {
+    margin: 40px 0;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
+    height: 340px;
 
     &-image {
       border-radius: 2px 2px 0 0;

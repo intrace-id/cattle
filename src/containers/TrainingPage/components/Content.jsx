@@ -1,22 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { fetchOneTraining } from '../../../store/actions';
 
-const Content = () => {
+const Content = ({ trainings }) => {
+    
+    let { trainingId } = useParams();
+
+    useEffect(() => {
+		fetchOneTraining(trainingId)
+    },[fetchOneTraining, trainingId])
+    
 
     return (
-        <div className='d-flex justify-content-center my-4 py-4'>
+        <div key={trainingId} className='d-flex justify-content-center my-4 py-4'>
             <div className="d-flex col-sm-12 col-md-10">
                 <div className="col-sm-9 px-4">
                     <h2 className='mt-4'>About Training</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt commodi vitae nihil aliquid! Voluptas nostrum quae aliquid explicabo. Inventore eos ullam perspiciatis, possimus et veniam reprehenderit recusandae. Beatae, ea facere.</p>
+                    <p>{ JSON.stringify(trainings) }</p>
                     <h2 className='mt-4'>Designed For</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dolores deserunt incidunt quos ipsam quasi rerum. Molestias maxime, voluptatem nisi, nulla reiciendis debitis veritatis fuga sit rerum consequuntur nemo voluptas.</p>
                     <h2 className='mt-4'>You Will Learn to</h2>
                     <ul>
-                        <li class='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
-                        <li class='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
-                        <li class='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
-                        <li class='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
-                        <li class='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
+                        <li className='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
+                        <li className='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
+                        <li className='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
+                        <li className='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
+                        <li className='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio provident alias quia laudantium ea sapiente excepturi illum totam debitis quidem quis quibusdam, deleniti ipsa harum consequatur eos. In, vitae.</li>
                     </ul>
                     <h2 className='mt-4'>Course Content</h2>
                     <div className='training-table mt-2'>
@@ -53,7 +63,7 @@ const Content = () => {
                         <div className='pb-3'>
                             <span>In-House: To Be Discussed</span>
                         </div>
-                        <div class='d-flex justify-content-center'>
+                        <div className='d-flex justify-content-center'>
                             <button className="btn col">Ask Us</button>
                             <button className="btn ml-2 btn-primary col">Register</button>
                         </div>
@@ -103,4 +113,15 @@ const Content = () => {
     )
 };
 
-export default Content;
+const mapStateToProps = ({ trainings }) => ({
+    trainings: trainings.trainings
+});
+
+const mapDispatchToProps = dispatch => ({
+    fetchOneTraining: id => dispatch(fetchOneTraining(id))
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Content);

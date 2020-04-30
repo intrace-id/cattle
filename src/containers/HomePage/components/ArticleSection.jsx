@@ -1,5 +1,5 @@
 import React from 'react';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, Image } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 const ArticleSection = () => {
@@ -18,14 +18,14 @@ const ArticleSection = () => {
                         <Slide index={0}><Image src={process.env.PUBLIC_URL + `/img/slider/iso-9001.png`}/></Slide>
                     </Slider>
                 </CarouselProvider>
-                <h3>ISO Series Training</h3>
-                <p>Improve your personal branding and management skills by learning how international standard workds. 
+                <h3 className="mt-2">ISO Series Training</h3>
+                <p className="text-justify indent">Improve your personal branding and management skills by learning how international standard workds. 
                     We do training for ISO 9001, 14001, 45001 and 37001 (Anti Bribery Management System)</p>
-                <h3>Technical Training Series</h3>
-                <p>Want to be an inspector? We provide everything. From introductory course on how to be an Inspector (in any industry),
+                <h3 className="mt-2">Technical Training Series</h3>
+                <p className="text-justify indent">Want to be an inspector? We provide everything. From introductory course on how to be an Inspector (in any industry),
                     to various of inspection certification (DROPS, NDT, etc). We also provide training services for HSE, Working at Height, etc.</p>
-                <h3>Leadership & Management Training</h3>
-                <p>Learn leadership from proven expert using industry-approved leadership certification program? Why not!</p>
+                <h3 className="mt-2">Leadership & Management Training</h3>
+                <p className="text-justify indent">Learn leadership from proven expert using industry-approved leadership certification program? Why not!</p>
             </div>
             <div className='col-sm-12 col-md-5 mt-2'>
                 <h2 className='mt-3'>Our Articles</h2>
